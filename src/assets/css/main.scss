@@ -98,7 +98,7 @@ button {
   padding: 12px 24px;
   font-size: 1rem;
   font-weight: 700;
-  background-color: var(--color-dark-blue);
+  background-color: var(--color-info);
   cursor: pointer;
 }
 
@@ -159,15 +159,22 @@ input:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: var(--color-dark);
-    background-color: var(--color-light-gray);
+    background-color: rgba(#333333, 0.05);
   }
   a:hover {
     color: var(--color-dark-blue);
   }
   .card {
-    filter: drop-shadow(0 0 0.3rem #000000);
+    background-color: var(--color-white);
+    filter: drop-shadow(1px 1px 1px 1px #000000);
   }
   .text-display {
     color: var(--color-dark-blue);
+  }
+  .text-body {
+    color: var(--color-grayish-blue);
+  }
+  button {
+    color: var(--color-white);
   }
 }
