@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+@import "./colors.scss";
+@import "./flex-box.scss";
+
+:root {
+  font-family: Outfit, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--color-dark-page);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --color-white: hsl(0, 0%, 100%);
+  --color-light-gray: hsl(212, 45%, 89%);
+  --color-grayish-blue: hsl(220, 15%, 55%);
+  --color-dark-blue: hsl(218, 44%, 22%);
+  --color-dark: #1d1d20;
+  --color-dark-page: #121212;
+  --color-positive: #7af27a;
+  --color-negative: #b2111c;
+  --color-info: #53b7eb;
+  --color-warning: #ffd41d;
+}
+
+*:focus,
+*:focus-visible,
+*:active,
+*:hover {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card {
+  border-radius: 12px;
+  background-color: var(--color-dark);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  padding: 1rem;
+  box-shadow: 0 0 0.3rem 0.1rem var(--dark);
+}
+
+.text-display {
+  font-size: 1.6rem;
+  line-height: 1.1;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.text-body {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+  color: var(--color-light-gray);
+}
+
+input {
+  border-radius: 4px;
+  border: 2px solid transparent;
+  padding: 4px 12px;
+  height: 40px;
+  font-size: 1rem;
+  transition: all 0.15s ease-in-out;
+}
+
+input::placeholder {
+  color: var(--color-grayish-blue);
+}
+
+button {
+  transition: all 0.15s ease-in-out;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: var(--color-dark-blue);
+  cursor: pointer;
+}
+
+button:active {
+  box-shadow: 2px 3px 14px -4px var(--color-dark-blue);
+}
+
+.block {
+  display: block;
+  width: 100%;
+}
+
+input:focus,
+input:focus-visible {
+  outline: none;
+  -webkit-box-shadow: 0 0 3px 2px var(--color-dark-blue);
+}
+
+.mt-md {
+  margin-top: 1rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.ml-md {
+  margin-left: 1rem;
+}
+
+.mt-xl {
+  margin-top: 2.5rem;
+}
+
+.ml-none {
+  margin-left: 0;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+@media screen and (min-width: 442px) {
+  .mt-md-none {
+    margin-top: 0;
+  }
+
+  .ml-md-md {
+    margin-left: 1rem;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--color-dark);
+    background-color: var(--color-light-gray);
+  }
+  a:hover {
+    color: var(--color-dark-blue);
+  }
+  .card {
+    filter: drop-shadow(0 0 0.3rem #000000);
+  }
+  .text-display {
+    color: var(--color-dark-blue);
+  }
+}
